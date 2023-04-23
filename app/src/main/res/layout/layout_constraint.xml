@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/DarkBlue"
+    android:background="@drawable/backgtround"
     android:paddingHorizontal="20dp"
     android:paddingTop="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        ></ImageView>
     <TextView
         android:id="@+id/txtSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SignUp"
         android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
         android:textSize="30dp"
         android:textColor="@color/Coral"
         android:layout_marginTop="25dp"
@@ -102,18 +113,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/boxTerms" />
-        <TextView
-            android:id="@+id/txtAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Already have an account?"
-            android:textColor="@color/White"
-            android:textSize="25dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnSignUp"
-            app:layout_constrainedWidth="true"
-            />
+    <TextView
+        android:id="@+id/txtAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Already have an account?"
+        android:textColor="@color/White"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+        app:layout_constrainedWidth="true"
+        />
     <TextView
         android:id="@+id/txtAccountSignIn"
         android:layout_width="wrap_content"
@@ -126,5 +137,5 @@
         android:textStyle="bold|italic"
         app:layout_constraintStart_toEndOf ="@id/txtAccount"
         app:layout_constraintTop_toBottomOf="@id/btnSignUp"
-  />
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

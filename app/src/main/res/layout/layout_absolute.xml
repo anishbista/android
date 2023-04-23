@@ -5,9 +5,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="120dp"
+        android:layout_x="150dp"
         android:layout_y="300dp"
-        android:text="Panchadev It Solution"
+        android:text="Hello Student"
         android:textSize="20dp"
         android:textColor="@color/Aqua"
         />
@@ -16,20 +16,20 @@
         android:layout_height="100dp"
         android:layout_x="320dp"
         android:layout_y="0dp"
-        android:background="@drawable/login_button"
+        android:background="@drawable/backgtround"
         />
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_x="0dp"
         android:layout_y="630dp"
-        android:background="@drawable/login_button"
+        android:background="@drawable/backgtround"
         />
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_x="320dp"
         android:layout_y="630dp"
-        android:background="@drawable/login_button"
+        android:background="@drawable/backgtround"
         />
 </AbsoluteLayout>

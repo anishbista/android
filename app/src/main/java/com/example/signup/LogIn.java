@@ -1,5 +1,6 @@
 package com.example.signup;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
     private EditText edtEmail, edtPass;
@@ -45,9 +47,21 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         if (view.getId() == R.id.btnSignIn) {
         } else if (view.getId() == R.id.txtSignUp) {
             Intent intent = new Intent(LogIn.this, SignupActivity.class);
-            startActivity(intent);
+//            intent.putExtra("Email",edtEmail.getText().toString().trim());
+            intent.putExtra("Email","Email Address");
+//            startActivity(intent);
+            startActivityForResult(intent,100);
+
 
 
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==100&& resultCode == RESULT_OK){
+            Toast.makeText(this,data.getStringExtra(""+""),Toast.LENGTH_SHORT).show();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
