@@ -6,6 +6,12 @@
     android:background="@drawable/backgtround"
     android:orientation="vertical">
 
+
+    <include
+        android:id="@+id/lyttoolbar"
+        layout="@layout/layout_toolbar"
+        />
+
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="100dp"
