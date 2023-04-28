@@ -6,9 +6,11 @@
              android:background="@drawable/backgtround"
 
     >
-    <include layout="@layout/layout_toolbar"
+    <include
+        android:id="@+id/lyttoolbar"
+        layout="@layout/layout_toolbar"
 
-        android:id="@+id/toolbar"/>
+        />
 
 
     <ImageView

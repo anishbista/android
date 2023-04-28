@@ -20,25 +20,19 @@ import android.widget.Toast;
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
     private EditText edtEmail, edtPass;
     private AppCompatButton btnSignIn;
-    private Toolbar toolbar;
+
     private TextView txtBCA, txtWelcome, txtForgot, txtAlready, txtSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-        initToolbar();
+
         findView();
 
     }
 
-    private void initToolbar() {
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("Login Page");
-    }
+
 
     private void findView() {
         edtEmail = findViewById(R.id.edtEmail);
@@ -90,10 +84,10 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         } else if (view.getId() == R.id.txtSignUp) {
             Intent intent = new Intent(LogIn.this, SignupActivity.class);
 //            intent.putExtra("Email",edtEmail.getText().toString().trim());
-            intent.putExtra("Email", "Email Address");
-//            startActivity(intent);
+//            intent.putExtra("Email", "Email Address");
+            startActivity(intent);
 //            startActivityForResult(intent,100);
-            signupActivityLauncher.launch(intent);
+//            signupActivityLauncher.launch(intent);
 
 
         }

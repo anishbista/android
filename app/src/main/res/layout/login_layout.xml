@@ -7,10 +7,10 @@
     android:orientation="vertical">
 
 
-    <include
-        android:id="@+id/lyttoolbar"
-        layout="@layout/layout_toolbar"
-        />
+<!--    <include-->
+<!--        android:id="@+id/lyttoolbar"-->
+<!--        layout="@layout/layout_toolbar"-->
+<!--        />-->
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -102,7 +102,7 @@
             android:id="@+id/txtAlready"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account"
+            android:text="Don't have an account?"
             android:textColor="@color/White"
             android:textSize="25dp" />
 
